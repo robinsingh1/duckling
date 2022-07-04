@@ -35,4 +35,5 @@ COPY --from=builder /root/.local/bin/duckling-example-exe /usr/local/bin/
 
 EXPOSE 8000
 
-CMD ["duckling-example-exe", "-p", ${PORT}, "--no-access-log", "--no-error-log"]
+#CMD ["duckling-example-exe", "-p", ${PORT}, "--no-access-log", "--no-error-log"]
+ENTRYPOINT ["./entrypoint.sh"]
